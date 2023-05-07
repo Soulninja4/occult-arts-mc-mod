@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C",
+    "S "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "C": {
+      "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "item": "occultarts:crude_dagger"
+  }
+}
