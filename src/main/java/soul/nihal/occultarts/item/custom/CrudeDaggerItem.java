@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.text.Text;
 import soul.nihal.occultarts.item.ModItems;
 
 public class CrudeDaggerItem extends SwordItem {
@@ -23,6 +24,7 @@ public class CrudeDaggerItem extends SwordItem {
         if (target instanceof SheepEntity && !target.isAlive()) {
           player.getInventory().removeStack(player.getInventory().selectedSlot);
           player.getInventory().insertStack(player.getInventory().selectedSlot, new ItemStack(ModItems.RITUAL_DAGGER));
+          player.sendMessage(Text.translatable("item.crude_dagger.awoken"), true);
         }
       }
     }

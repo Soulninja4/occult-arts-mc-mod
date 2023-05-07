@@ -2,5 +2,6 @@
   "item.occultarts.blood_drop": "Blood Drop",
   "item.occultarts.crude_dagger": "Crude Dagger",
   "item.occultarts.ritual_dagger": "Ritual Dagger",
-  "itemgroup.occult": "Occult Item Group"
+  "itemgroup.occult": "Occult Item Group",
+  "item.crude_dagger.awoken": "The dagger has awoken"
 }
