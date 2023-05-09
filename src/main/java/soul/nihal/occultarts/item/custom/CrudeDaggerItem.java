@@ -1,6 +1,7 @@
 package soul.nihal.occultarts.item.custom;
 
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.passive.GoatEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -21,10 +22,14 @@ public class CrudeDaggerItem extends SwordItem {
     if (attacker instanceof PlayerEntity) {
       PlayerEntity player = (PlayerEntity) attacker;
       if (!player.getMainHandStack().isEmpty() && player.getMainHandStack().getItem() == this) {
-        if (target instanceof SheepEntity && !target.isAlive()) {
-          player.getInventory().removeStack(player.getInventory().selectedSlot);
-          player.getInventory().insertStack(player.getInventory().selectedSlot, new ItemStack(ModItems.RITUAL_DAGGER));
-          player.sendMessage(Text.translatable("item.crude_dagger.awoken"), true);
+        if (target instanceof SheepEntity || target instanceof GoatEntity) {
+          if (!target.isAlive()) {
+            player.getInventory().removeStack(player.getInventory().selectedSlot);
+            player.getInventory().insertStack(player.getInventory().selectedSlot,
+                new ItemStack(ModItems.RITUAL_DAGGER));
+            player.sendMessage(Text.translatable("item.crude_dagger.awoken"), true);
+
+          }
         }
       }
     }

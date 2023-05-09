@@ -3,6 +3,7 @@ package soul.nihal.occultarts;
 import net.fabricmc.api.ModInitializer;
 import soul.nihal.occultarts.item.ModItemGroup;
 import soul.nihal.occultarts.item.ModItems;
+import soul.nihal.occultarts.util.ModLootTableModifiers;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,5 +23,7 @@ public class OccultArts implements ModInitializer {
         ModItemGroup.registerItemGroups();
         ModItems.registerModItems();
         LOGGER.info("Hello Fabric world!");
+
+        ModLootTableModifiers.modifyLootTables();
     }
 }
